@@ -45,13 +45,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">Studio</a>
+                        <a href="#about" class="nav-link smoothScroll">Download</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#project" class="nav-link smoothScroll">Our Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="blog.html" class="nav-link">Blog</a>
+                        <a href="userRegistration.php" class="nav-link">Register</a>
                     </li>
                     <li class="nav-item">
                         <a href="Requester/RequesterLogin.php" class="nav-link contact">Login</a>
@@ -69,11 +66,11 @@
                         <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                               <div class="hero-text">
 
-                                   <h1 class="text-white" data-aos="fade-up">We are ready for your digital marketing</h1>
+                                   <h1 class="text-white" data-aos="fade-up">Révolutionnez la gestion de vos interventions sans être limité!</h1>
 
-                                   <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Let us discuss together!</a>
+                                   <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Découvrez toutes les fonctionnalités</a>
 
-                                   <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong>
+                                   <!-- <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong> -->
                               </div>
                         </div>
 
@@ -112,7 +109,7 @@
                </div>
           </div>
      </section>
-
+     
      <footer class="site-footer">
       <div class="container">
         <div class="row">
