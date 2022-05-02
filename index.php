@@ -24,7 +24,7 @@
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
        <!-- MAIN CSS -->
        <link rel="stylesheet" href="css/templatemo-digital-trend.css">
-       <title>datainterventions | gerer vos interventions gratuits!</title>
+       <title>datainterventions | gérer vos interventions gratuits!</title>
 </head>
 
 
@@ -45,13 +45,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">Download</a>
+                        <a href="#about" class="nav-link smoothScroll">Télecharger</a>
                     </li>
                     <li class="nav-item">
-                        <a href="userRegistration.php" class="nav-link">Register</a>
+                        <a href="userRegistration.php" class="nav-link">S'inscrire</a>
                     </li>
                     <li class="nav-item">
-                        <a href="Requester/RequesterLogin.php" class="nav-link contact">Login</a>
+                        <a href="Requester/RequesterLogin.php" class="nav-link contact">connexion</a>
                     </li>
                 </ul>
             </div>
@@ -68,7 +68,7 @@
 
                                    <h1 class="text-white" data-aos="fade-up">Révolutionnez la gestion de vos interventions sans être limité!</h1>
 
-                                   <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Découvrez toutes les fonctionnalités</a>
+                                   <a href="Requester/RequesterLogin.php" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Demander une intervention</a>
 
                                    <!-- <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong> -->
                               </div>
@@ -94,10 +94,10 @@
                     <div class="col-lg-7 mx-auto col-md-10 col-12">
                          <div class="about-info">
 
-                              <h2 class="mb-4" data-aos="fade-up">the best <strong>Digital Marketing agency</strong> in Rio de Janeiro</h2>
+                              <h2 class="mb-4" data-aos="fade-up">Centralisez votre <strong>gestion d'intervention</strong></h2>
 
-                              <p class="mb-0" data-aos="fade-up">Total 5 HTML pages are included in this template from TemplateMo website. Please check 2 <a href="blog.html">blog</a> pages, <a href="project-detail.html">project</a> page, and <a href="contact.html">contact</a> page. 
-                              <br><br>You are <strong>allowed</strong> to use this template for commercial or non-commercial purpose. You are NOT allowed to redistribute the template ZIP file on template collection websites.</p>
+                              <p class="mb-0" data-aos="fade-up">Avec notre outil personnalisable, vous assignez et suivez vos interventions facilement. 
+                              <br><br>Planifiez, facturez et suivez vos interventions au bureau et sur le terrain avec notre application web et mobile.</p>
                          </div>
 
                          <div class="about-image" data-aos="fade-up" data-aos-delay="200">
@@ -115,11 +115,11 @@
         <div class="row">
 
           <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
-            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">We make creative <strong>brands</strong> only.</h1>
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Besoin de faciliter toute la gestion de vos <strong>interventions ?</strong></h1>
           </div>
 
           <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
-            <h4 class="my-4">Contact Info</h4>
+            <h4 class="my-4">Contactez Nous</h4>
 
             <p class="mb-1">
               <i class="fa fa-phone mr-2 footer-icon"></i> 
@@ -129,7 +129,7 @@
             <p>
               <a href="#">
                 <i class="fa fa-envelope mr-2 footer-icon"></i>
-                hello@company.com
+                Contact@dataxpress.ma
               </a>
             </p>
           </div>
@@ -139,22 +139,22 @@
 
             <p class="mb-1">
               <i class="fa fa-home mr-2 footer-icon"></i> 
-              Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
+              Hay Salam El Jadida, Maroc
             </p>
           </div>
 
           <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
-            <p class="copyright-text">Copyright &copy; 2020 Your Company
+            <p class="copyright-text">Copyright &copy; 2022 Dataxpress
             <br>
-            <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
+           
           </div>
 
           <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
             
             <ul class="footer-link">
-              <li><a href="#">Stories</a></li>
-              <li><a href="#">Work with us</a></li>
-              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Connexion</a></li>
+              <li><a href="#">S'iscrire</a></li>
+              <li><a href="#">Télecharger</a></li>
             </ul>
           </div>
 
