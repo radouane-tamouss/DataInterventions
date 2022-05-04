@@ -34,13 +34,17 @@
 <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
 <!-- Page CSS -->
+<style>
+  input[readonly] {background-color: white !important;}
 
+</style>
 <!-- Helpers -->
 <script src="../assets/vendor/js/helpers.js"></script>
 
 <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 <script src="../assets/js/config.js"></script>
+
 </head>
 
 <body>
@@ -53,7 +57,9 @@
         <!-- Menu -->
   <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         
-            
+            <div class="m-2">
+             <img src="../images/data.png" alt="">
+            </div>
 
         <div class="menu-inner-shadow"></div>
        
@@ -62,31 +68,32 @@
           
           <li class="menu-item <?php if(PAGE == 'RequesterProfile') { echo 'active'; } ?>">
             <a href="RequesterProfile.php" class="menu-link ">
-              <i class="menu-icon tf-icons bx bx-home-circle"></i>
+            <i class="menu-icon tf-icons bx bx-user"></i>
               <div data-i18n="Analytics">profile</div>
             </a>
           </li>
           <li class="menu-item <?php if(PAGE == 'SubmitRequest') { echo 'active'; } ?>">
               <a href="SubmitRequest.php" class="menu-link ">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <i class="menu-icon tf-icons bx bx-detail"></i>
                 <div data-i18n="Analytics">submit request</div>
               </a>
           </li>
           <li class="menu-item <?php if(PAGE == 'CheckStatus') { echo 'active'; } ?>">
               <a href="CheckStatus.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <i class='menu-icon tf-icons bx bx-comment-check'></i>
+               
                 <div data-i18n="Analytics">service status</div>
               </a>
           </li>
           <li class="menu-item <?php if(PAGE == 'Requesterchangepass') { echo 'active'; } ?>">
               <a href="Requesterchangepass.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <i class='menu-icon tf-icons bx bx-key'></i>
                 <div data-i18n="Analytics">change password</div>
               </a>
           </li>
           <li class="menu-item">
               <a href="../logout.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <i class='menu-icon tf-icons bx bx-log-out' ></i>
                 <div data-i18n="Analytics">logout</div>
               </a>
           </li>
