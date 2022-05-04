@@ -47,6 +47,7 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link smoothScroll">Télecharger</a>
                     </li>
+               
                     <li class="nav-item">
                         <a href="userRegistration.php" class="nav-link">S'inscrire</a>
                     </li>
