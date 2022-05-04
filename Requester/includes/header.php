@@ -91,6 +91,7 @@
                 <div data-i18n="Analytics">changer mot de passe</div>
               </a>
           </li>
+          
           <li class="menu-item">
               <a href="../logout.php" class="menu-link">
               <i class='menu-icon tf-icons bx bx-log-out' ></i>
