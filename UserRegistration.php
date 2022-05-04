@@ -11,7 +11,7 @@
       $sql = "SELECT r_email FROM requesterlogin_tb WHERE r_email='".$_REQUEST['rEmail']."'";
       $result = $conn->query($sql);
       if($result->num_rows == 1){
-        $regmsg = '<div class="alert alert-warning mt-2" role="alert"> Email ID Already Registered </div>';
+        $regmsg = '<div class="alert alert-warning mt-2" role="alert"> Cet E-mail est déjà enregistré </div>';
       } else {
         // Assigning User Values to Variable
         $rName = $_REQUEST['rName'];
@@ -19,9 +19,11 @@
         $rPassword = $_REQUEST['rPassword'];
         $sql = "INSERT INTO requesterlogin_tb(r_name, r_email, r_password) VALUES ('$rName','$rEmail', '$rPassword')";
         if($conn->query($sql) == TRUE){
-          $regmsg = '<div class="alert alert-success mt-2" role="alert"> Account Succefully Created </div>';
+          $regmsg = '<div class="alert alert-success mt-2" role="alert"> Compte créé avec succès
+          </div>';
         } else {
-          $regmsg = '<div class="alert alert-danger mt-2" role="alert"> Unable to Create Account </div>';
+          $regmsg = '<div class="alert alert-danger mt-2" role="alert"> 
+          Impossible de créer un compte </div>';
         }
       }
     }
@@ -45,7 +47,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Register DataIntervention | Solution gestion des interventions</title>
+    <title>S'iscrire DataIntervention | Demander des interventions enligne</title>
 
     <meta name="description" content="" />
 
@@ -143,31 +145,31 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
+                  <span class="app-brand-text demo text-body fw-bolder" style="text-transform: capitalize;">Data<span style="color: #696cff">Intervention</span></span>
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Adventure starts here 🚀</h4>
+
               <p class="mb-4"></p>
 
               <form id="formAuthentication" class="mb-3" action="" method="POST">
                 <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
+                  <label for="username" class="form-label">Nom d'utilisateur</label>
                   <input
                     type="text"
                     class="form-control"
                     id="username"
                     name="rName"
-                    placeholder="Enter your username"
+                    placeholder="Entrez votre nom d'utilisateur"
                     autofocus
                   />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="rEmail" placeholder="Enter your email" />
+                  <input type="text" class="form-control" id="email" name="rEmail" placeholder="Entrez votre nom d'utilisateur" />
                 </div>
                 <div class="mb-3 form-password-toggle">
-                  <label class="form-label" for="password">Password</label>
+                  <label class="form-label" for="password">Mot de passe</label>
                   <div class="input-group input-group-merge">
                     <input
                       type="password"
@@ -185,19 +187,19 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
                     <label class="form-check-label" for="terms-conditions">
-                      I agree to
-                      <a href="javascript:void(0);">privacy policy & terms</a>
+                    J'accepte 
+                      <a href="javascript:void(0);">la politique de confidentialité et les conditions</a>
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary d-grid w-100"  name="rSignup">Sign up</button>
+                <button type="submit" class="btn btn-primary d-grid w-100"  name="rSignup">S'iscrire</button>
                 <?php if(isset($regmsg)) {echo $regmsg; } ?>
               </form>
 
               <p class="text-center">
-                <span>Already have an account?</span>
+                <span>Vous avez déjà un compte?</span>
                 <a href="Requester/RequesterLogin.php">
-                  <span>Sign in instead</span>
+                  <span>S'identifier</span>
                 </a>
               </p>
             </div>
