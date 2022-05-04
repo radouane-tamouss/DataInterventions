@@ -15,7 +15,8 @@ if(!isset($_SESSION['is_login'])){
       echo "<script> location.href='RequesterProfile.php'; </script>";
       exit;
     } else {
-      $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
+      $msg = '<div class="alert alert-warning mt-2" role="alert"> 
+      Entrez un e-mail et un mot de passe valides </div>';
     }
   }
 } else {
@@ -40,7 +41,7 @@ if(!isset($_SESSION['is_login'])){
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Login</title>
+    <title>Connexion</title>
 
     <meta name="description" content="" />
 
@@ -142,12 +143,12 @@ if(!isset($_SESSION['is_login'])){
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome! 👋</h4>
-              <p class="mb-4">Please sign-in to your account</p>
+              <h4 class="mb-2">Bounjour! 👋</h4>
+              <p class="mb-4">Connectez-vous à votre compte </p>
 
               <form id="formAuthentication" class="mb-3" action="" method="POST">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="email" class="form-label">Email</label>
                   <input
                     type="text"
                     class="form-control"
@@ -159,7 +160,7 @@ if(!isset($_SESSION['is_login'])){
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
-                    <label class="form-label" for="password">Password</label>
+                    <label class="form-label" for="password">Mot de passe</label>
                 
                   </div>
                   <div class="input-group input-group-merge">
@@ -175,21 +176,20 @@ if(!isset($_SESSION['is_login'])){
                   </div>
                 </div>
                 <div class="mb-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="remember-me" />
-                    <label class="form-check-label" for="remember-me"> Remember Me </label>
-                  </div>
+                  
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                  <button class="btn btn-primary d-grid w-100" type="submit">
+S'identifier</button>
                 </div>
                 <?php if(isset($msg)) {echo $msg; } ?>
               </form>
 
               <p class="text-center">
-                <span>New on our platform?</span>
+                <span>Nouveau sur datainterventions ?</span>
                 <a href="../UserRegistration.php">
-                  <span>Create an account</span>
+                  <span>
+Créer un compte</span>
                 </a>
               </p>
             </div>

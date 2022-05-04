@@ -145,7 +145,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bolder" style="text-transform: capitalize;">Data<span style="color: #696cff">Intervention</span></span>
+                  <span class="app-brand-text demo text-body fw-bolder" style="text-transform: capitalize;">Data<span style="color: #696cff">Interventions</span></span>
                 </a>
               </div>
               <!-- /Logo -->
