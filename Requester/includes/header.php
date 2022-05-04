@@ -75,7 +75,7 @@
           <li class="menu-item <?php if(PAGE == 'SubmitRequest') { echo 'active'; } ?>">
               <a href="SubmitRequest.php" class="menu-link ">
               <i class="menu-icon tf-icons bx bx-detail"></i>
-                <div data-i18n="Analytics">submit request</div>
+                <div data-i18n="Analytics">Envoyer la demande</div>
               </a>
           </li>
           <li class="menu-item <?php if(PAGE == 'CheckStatus') { echo 'active'; } ?>">
@@ -88,7 +88,7 @@
           <li class="menu-item <?php if(PAGE == 'Requesterchangepass') { echo 'active'; } ?>">
               <a href="Requesterchangepass.php" class="menu-link">
               <i class='menu-icon tf-icons bx bx-key'></i>
-                <div data-i18n="Analytics">change password</div>
+                <div data-i18n="Analytics">changer mot de passe</div>
               </a>
           </li>
           <li class="menu-item">
