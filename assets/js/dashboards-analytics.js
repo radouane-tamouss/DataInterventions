@@ -12,18 +12,38 @@
   axisColor = config.colors.axisColor;
   borderColor = config.colors.borderColor;
 
+
+
+  const localDate = new Date();
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+let currentMonth = months[localDate.getMonth()];
+let lastMonth = months[localDate.getMonth()-1];
+
   // Total Revenue Report Chart - Bar Chart
   // --------------------------------------------------------------------
   const totalRevenueChartEl = document.querySelector('#totalRevenueChart'),
     totalRevenueChartOptions = {
       series: [
         {
-          name: '2021',
+          name: currentMonth,
           data: [18, 7, 15, 29, 18, 12, 9]
         },
         {
-          name: '2020',
-          data: [-13, -18, -9, -14, -5, -17, -15]
+          name: lastMonth,
+          data: [13, 18, 3, -4, -5, -17, -15]
         }
       ],
       chart: {
@@ -394,7 +414,7 @@
       },
       series: [
         {
-          data: [110, 270, 145, 245, 205, 285]
+          data: [1,34,4,54,70,3,0]
         }
       ],
       xaxis: {
