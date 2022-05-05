@@ -22,6 +22,8 @@
 <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
 <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
 <link rel="stylesheet" href="../assets/css/demo.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 
 <!-- Vendors CSS -->
 <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
