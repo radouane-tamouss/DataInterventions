@@ -12,22 +12,22 @@
   axisColor = config.colors.axisColor;
   borderColor = config.colors.borderColor;
 
-
+  
 
   const localDate = new Date();
 const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
+  'janvier',
+  'février',
+  'mars',
+  'avril',
+  'mai',
+  'juin',
+  'juillet',
+  'août',
+  'septembre',
+  'octobre',
+  'novembre',
+  'décembre',
 ];
 let currentMonth = months[localDate.getMonth()];
 let lastMonth = months[localDate.getMonth()-1];
