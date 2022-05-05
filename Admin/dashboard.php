@@ -46,6 +46,16 @@ session_start();
  $result = $conn->query($sql);
  $totaltech = $result->num_rows;
 
+ $sql = " SELECT sum(psellingcost)
+ from assets_tb
+ WHERE month(pdop)=MONTH(now())
+ group by year(pdop),month(pdop)
+ order by year(pdop),month(pdop);";
+ $result = $conn->query($sql);
+ $row = mysqli_fetch_row($result);
+ $assets = $row[0];
+
+
 
 
 ?>
@@ -164,7 +174,7 @@ session_start();
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                          <h5 class="card-title text-primary">DataIntervention Espace Admin </h5>
                           <p class="mb-4">
                             You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
                             your profile.
@@ -247,7 +257,7 @@ session_start();
                               </button>
                               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
                                 <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                    
                               </div>
                             </div>
                           </div>
@@ -299,8 +309,8 @@ session_start();
                               <span class="badge bg-label-primary p-2"><i class="bx bx-dollar text-primary"></i></span>
                             </div>
                             <div class="d-flex flex-column">
-                              <small>2022</small>
-                              <h6 class="mb-0">$32.5k</h6>
+                              <small><?php echo date('m');?></small>
+                              <h6 class="mb-0"><?php echo $assets ?> dh</h6>
                             </div>
                           </div>
                           <div class="d-flex">
@@ -340,7 +350,7 @@ session_start();
                               </button>
                               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
                                 <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                               
                               </div>
                             </div>
                           </div>
@@ -370,7 +380,7 @@ session_start();
                               </button>
                               <div class="dropdown-menu" aria-labelledby="cardOpt1">
                                 <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                
                               </div>
                             </div>
                           </div>
@@ -389,7 +399,7 @@ session_start();
                             <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
                               <div class="card-title">
                                 <h5 class="text-nowrap mb-2">Profile Report</h5>
-                                <span class="badge bg-label-warning rounded-pill">Year 2021</span>
+                                <span class="badge bg-label-warning rounded-pill">Cette Semaine</span>
                               </div>
                               <div class="mt-sm-auto">
                                 <small class="text-success text-nowrap fw-semibold"
