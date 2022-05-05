@@ -91,24 +91,19 @@
                 <div data-i18n="Analytics">requester</div>
               </a>
           </li>
+          <li class="menu-item <?php if(PAGE == 'workreport') { echo 'active'; } ?>">
+              <a href="workreport.php" class="menu-link">
+              <i class='menu-icon tf-icons bx bx-key'></i>
+                <div data-i18n="Analytics">Work Report</div>
+              </a>
+          </li>
           <li class="menu-item <?php if(PAGE == 'sellreport') { echo 'active'; } ?>">
               <a href="soldproductreport.php" class="menu-link">
               <i class='menu-icon tf-icons bx bx-key'></i>
                 <div data-i18n="Analytics">sellreport</div>
               </a>
           </li>
-          <li class="menu-item <?php if(PAGE == 'sellreport') { echo 'active'; } ?>">
-              <a href="soldproductreport.php" class="menu-link">
-              <i class='menu-icon tf-icons bx bx-key'></i>
-                <div data-i18n="Analytics">sellreport</div>
-              </a>
-          </li>
-          <li class="menu-item">
-              <a href="../logout.php" class="menu-link">
-              <i class='menu-icon tf-icons bx bx-log-out' ></i>
-                <div data-i18n="Analytics">logout</div>
-              </a>
-          </li>
+        
         </ul>
       </aside>
 
