@@ -16,6 +16,7 @@ include('../dbConnection.php');
  $row = $result->fetch_assoc();
  $rName = $row["r_name"]; }
 
+
  if(isset($_REQUEST['nameupdate'])){
   if(($_REQUEST['rName'] == "")){
    // msg displayed if required field missing
@@ -170,7 +171,8 @@ include('../dbConnection.php');
                       class="form-control"
                       id="basic-icon-default-fullname"
                       name="rName"
-                      value="<?php echo $rName?>"
+                      value=" <?php echo $rName ?>"
+                     
                       aria-describedby="basic-icon-default-fullname2"
                     />
                   </div>

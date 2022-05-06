@@ -38,7 +38,7 @@ if(isset($_REQUEST['submitrequest'])){
     include('submitrequestsuccess.php');
    } else {
     // below msg display on form submit failed
-    $msg = '<div class="alert alert-danger col-sm-6 ml-5 mt-2" role="alert"> Unable to Submit Your Request </div>';
+    $msg = '<div class="alert alert-danger col-sm-12 ml-5 mt-2" role="alert"> Unable to Submit Your Request </div>';
    }
  }
 }
@@ -215,8 +215,8 @@ if(isset($_REQUEST['submitrequest'])){
                           <div class="col-sm-10">
                           <input
                           class="form-control"
-                          type="datetime-local"
-                          value="2022-04-28T12:30:00"
+                          type="date"
+                          value="<?=date("Y-m-d");?>"
                           id="inputDate"
                           name="requestdate"
 
@@ -255,11 +255,11 @@ if(isset($_REQUEST['submitrequest'])){
                 </div>
 
                 
-           
+              
                
                 
-                <button type="submit" class="btn btn-primary me-2" name="submitrequest">Submit</button>
-                <button type="reset" class="btn btn-outline-secondary">reset</button>
+                <button type="submit" class=" btn btn-primary me-2 my-2" name="submitrequest">Submit</button>
+                <button type="reset" class="btn btn-outline-secondary me-2 my-2">reset</button>
 
                 <?php if(isset($msg)) {echo $msg; } ?>
               </form>
