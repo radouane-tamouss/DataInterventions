@@ -29,7 +29,7 @@ session_start();
                    echo'   <h5 class="card-title"> Request Info: '. $row['request_info'] . '</h5>';
                      echo'<p class="card-text">'. $row['request_desc']. '</p>';
 
-                        echo '<form action="" method="POST"> <input type="hidden"  name="id"  value='. $row["request_id"] .'><input type="submit" class="btn btn-primary mr-3" name="view"  value="View"><input type="submit" class="btn btn-secondary" name="close" value="Close"></form>';
+                        echo '<form action="" method="POST"> <input type="hidden"  name="id"  value='. $row["request_id"] .'><input type="submit" class="btn btn-primary mr-3" name="view"  value="View" ><input type="submit" class="btn btn-secondary" name="close" value="Close"></form>';
 
                      
                    echo'</div>';
