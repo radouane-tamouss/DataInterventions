@@ -23,7 +23,7 @@ session_start();
           <div class="content-wrapper">
             <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="container-xxl col-lg-10 flex-grow-1 container-p-y">
 
               <!-- Bordered Table -->
               <div class="card">
