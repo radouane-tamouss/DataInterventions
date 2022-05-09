@@ -138,7 +138,7 @@ if(isset($_REQUEST['submitrequest'])){
             </li>
             <li>
               <a class="dropdown-item" href="auth-login-basic.html">
-              <i class='bx bx-power-off bx-fade-right' style='color:#ff0a00' ></i>
+              <i class='bx bx-power-off ' style='color:#ff0a00' ></i>
               </a>
             </li>
           </ul>
@@ -269,7 +269,32 @@ if(isset($_REQUEST['submitrequest'])){
     </div>
     <!-- / Content -->
 
-   
+     <!-- Footer -->
+     <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  
+                  <a href="https://github.com/radouane-tamouss" target="_blank" class="footer-link fw-bolder">Dataxpress</a>
+                </div>
+                <div>
+                 
+
+                 
+
+                  <a
+                    href="mailto:atamousse.red@email.com"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div>
+              </div>
+            </footer>
+          <!-- / Footer -->
 
     <div class="content-backdrop fade"></div>
   </div>
