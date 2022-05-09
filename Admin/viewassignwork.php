@@ -38,7 +38,7 @@ session_start();
                
 
                 <a href="../logout.php">
-                <i class='bx bx-power-off ' style='color:#ff0a00' ></i>
+                <i class='bx bx-exit' style='color:#f70000'  ></i>
                       </a>
               </ul>
             </div>
@@ -187,7 +187,7 @@ session_start();
                  
 
                   <a
-                    href="https://github.com/radouane-tamouss"
+                    href="mailto:atamousse.red@email.com"
                     target="_blank"
                     class="footer-link me-4"
                     >Support</a
