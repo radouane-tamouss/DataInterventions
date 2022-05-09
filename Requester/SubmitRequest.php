@@ -138,8 +138,7 @@ if(isset($_REQUEST['submitrequest'])){
             </li>
             <li>
               <a class="dropdown-item" href="auth-login-basic.html">
-                <i class="bx bx-power-off me-2"></i>
-                <span class="align-middle">Log Out</span>
+              <i class='bx bx-power-off bx-fade-right' style='color:#ff0a00' ></i>
               </a>
             </li>
           </ul>
