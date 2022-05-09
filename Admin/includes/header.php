@@ -17,7 +17,7 @@
   href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
   rel="stylesheet"
 />
-  
+
 <!-- Core CSS -->
 <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
 <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -47,15 +47,12 @@
         <!-- Menu -->
   <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         
-            <div class="m-2">
-             <img src="../images/data.png" alt="">
-            </div>
-
+        
         <div class="menu-inner-shadow"></div>
        
-        <ul class="menu-inner py-1">
+        <ul class="menu-inner py-4">
           <!-- Dashboard -->
-          
+         
           <li class="menu-item <?php if(PAGE == 'dashboard') { echo 'active'; } ?>">
             <a href="dashboard.php" class="menu-link ">
             <i class="menu-icon tf-icons bx bx-user"></i>
