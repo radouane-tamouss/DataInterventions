@@ -59,7 +59,7 @@ if(isset($_REQUEST['psubmit'])){
                
 
                 <a href="../logout.php">
-                <i class='bx bx-power-off ' style='color:#ff0a00' ></i>
+                <i class='bx bx-exit' style='color:#f70000'  ></i>
                         
                       </a>
               </ul>
@@ -77,15 +77,15 @@ if(isset($_REQUEST['psubmit'])){
       <div class="col-xl">
           <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">Add New Product</h5>
-              <small class="text-muted float-end">Merged input group</small>
+              <h5 class="mb-0">Ajouter un nouveau produit</h5>
+            
             </div>
             <div class="card-body">
               <form  class="mx-5" action="" method="POST">
                
 
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputRequestInfo">Product Name</label>
+                          <label class="col-sm-2 col-form-label" for="inputRequestInfo">Nom de Produit</label>
                           <div class="col-sm-10">
                             <input
                             id="pname"
@@ -99,13 +99,13 @@ if(isset($_REQUEST['psubmit'])){
 
                
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputName">Date of Purchase</label>
+                          <label class="col-sm-2 col-form-label" for="inputName">Date d'achat</label>
                           <div class="col-sm-10">
                             <input type="date" class="form-control today" id="pdop" value="<?=date("Y-m-d");?>" name="pdop"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputEmail">Available</label>
+                          <label class="col-sm-2 col-form-label" for="inputEmail">Quantité en stock</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="pava"onkeypress="isInputNumber(event)" name="pava"/>
                           </div>
@@ -118,13 +118,13 @@ if(isset($_REQUEST['psubmit'])){
                 </div>
                 
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputAddress">Original Cost Each</label>
+                          <label class="col-sm-2 col-form-label" for="inputAddress">Coût d'origine chacun</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="poriginalcost"  name="poriginalcost"  onkeypress="isInputNumber(event)"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputAddress2">Selling Cost Each</label>
+                          <label class="col-sm-2 col-form-label" for="inputAddress2">Coût de vente chacun</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="psellingcost" placeholder="Address Line 2"  onkeypress="isInputNumber(event)" name="psellingcost"/>
                           </div>
@@ -135,8 +135,8 @@ if(isset($_REQUEST['psubmit'])){
               
                
                 
-                <button type="submit" class=" btn btn-primary me-2 my-2" id="psubmit" name="psubmit">Submit</button>
-                <a href="assets.php" class="btn btn-secondary">close</a>
+                <button type="submit" class=" btn btn-primary me-2 my-2" id="psubmit" name="psubmit">Ajouter</button>
+                <a href="assets.php" class="btn btn-secondary">Fermer</a>
 
                 <?php if(isset($msg)) {echo $msg; } ?>
               </form>
