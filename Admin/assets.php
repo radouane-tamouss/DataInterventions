@@ -127,7 +127,7 @@ session_start();
                  
 
                   <a
-                    href="https://github.com/radouane-tamouss"
+                    href="mailto:atamousse.red@email.com"
                     target="_blank"
                     class="footer-link me-4"
                     >Support</a
