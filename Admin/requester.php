@@ -63,18 +63,18 @@ session_start();
                   $sql = "SELECT * FROM requesterlogin_tb";
                   $result = $conn->query($sql);
                   if($result->num_rows > 0){
-              echo '
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Requester ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody class="table-border-bottom-0">';
-                while($row = $result->fetch_assoc()){
+                echo '
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Requester ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-border-bottom-0">';
+                  while($row = $result->fetch_assoc()){
                   echo '<tr>';
                   echo '<th scope="row">'.$row["r_login_id"].'</th>';
                   echo '<td>'. $row["r_name"].'</td>';
@@ -84,25 +84,25 @@ session_start();
                     <form action="editreq.php" method="POST" class="d-inline"> <input type="hidden" name="id" value='. $row["r_login_id"] .'><button type="submit" class="btn btn-primary  py-0 px-1" name="view" value="View"><i class="bi bi-pencil-square"></i></button></form>  
                     <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value='. $row["r_login_id"] .'><button type="submit" class="btn btn-danger  py-0 px-1" name="delete" value="Delete"><i class="bi bi-trash-fill"></i></button></form>
                   </td>
-                </tr>';
-               
-              }
-              echo '</tbody>
-            </table>';
-          } else {
-            echo "0 Result";
-          }
-          if(isset($_REQUEST['delete'])){
-            $sql = "DELETE FROM requesterlogin_tb WHERE r_login_id = {$_REQUEST['id']}";
-            if($conn->query($sql) === TRUE){
-              // echo "Record Deleted Successfully";
-              // below code will refresh the page after deleting the record
-              echo '<meta http-equiv="refresh" content= "0;URL=?deleted" />';
-              } else {
-                echo "Unable to Delete Data";
-              }
-            }
-          ?>
+                  </tr>';
+                
+                }
+                    echo '</tbody>
+                  </table>';
+                } else {
+                  echo "0 Result";
+                }
+                if(isset($_REQUEST['delete'])){
+                  $sql = "DELETE FROM requesterlogin_tb WHERE r_login_id = {$_REQUEST['id']}";
+                  if($conn->query($sql) === TRUE){
+                    // echo "Record Deleted Successfully";
+                    // below code will refresh the page after deleting the record
+                    echo '<meta http-equiv="refresh" content= "0;URL=?deleted" />';
+                    } else {
+                      echo "Unable to Delete Data";
+                    }
+                  }
+                  ?>
         </div>
         </div>
         <a class="btn btn-dark box mt-3" href="insertreq.php"><i class="bi bi-plus-square"></i></a>
