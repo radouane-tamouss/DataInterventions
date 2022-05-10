@@ -43,12 +43,12 @@ let lastMonth = months[localDate.getMonth()-1];
         },
         {
           name: lastMonth,
-          data: [13, 18, 3, -4, -5, -17, -15]
+          data: [13, 18, 3, 4, 5, 17, 15]
         }
       ],
       chart: {
         height: 300,
-        stacked: true,
+        stacked: false,
         type: 'bar',
         toolbar: { show: false }
       },
