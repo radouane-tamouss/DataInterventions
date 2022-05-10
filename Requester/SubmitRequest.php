@@ -9,11 +9,18 @@ if($_SESSION['is_login']){
 } else {
  echo "<script> location.href='RequesterLogin.php'; </script>";
 }
+
+$sql = "SELECT * FROM requesterlogin_tb WHERE r_email='$rEmail'";
+$result = $conn->query($sql);
+if($result->num_rows == 1){
+$row = $result->fetch_assoc();
+$rName = $row["r_name"]; }
+
 if(isset($_REQUEST['submitrequest'])){
  // Checking for Empty Fields
  if(($_REQUEST['requestinfo'] == "") || ($_REQUEST['requestdesc'] == "") || ($_REQUEST['requestername'] == "") || ($_REQUEST['requesteradd1'] == "") || ($_REQUEST['requesteradd2'] == "") || ($_REQUEST['requestercity'] == "") || ($_REQUEST['requesterstate'] == "") || ($_REQUEST['requesterzip'] == "") || ($_REQUEST['requesteremail'] == "") || ($_REQUEST['requestermobile'] == "") || ($_REQUEST['requestdate'] == "")){
   // msg displayed if required field missing
-  $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+  $msg = '<div class="alert alert-warning col-sm-12 mt-2" role="alert">Remplir tous les champs</div>';
  } else {
    // Assigning User Values to Variable
    $rinfo = $_REQUEST['requestinfo'];
@@ -31,14 +38,14 @@ if(isset($_REQUEST['submitrequest'])){
    if($conn->query($sql) == TRUE){
     // below msg display on form submit success
     $genid = mysqli_insert_id($conn);
-    $msg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Request Submitted Successfully Your' . $genid .' </div>';
+    $msg = '<div class="alert alert-success col-sm-12 mt-2" role="alert">Demande soumise avec succès Votre' . $genid .' </div>';
     session_start();
     $_SESSION['myid'] = $genid;
     echo "<script> location.href='submitrequestsuccess.php'; </script>";
     include('submitrequestsuccess.php');
    } else {
     // below msg display on form submit failed
-    $msg = '<div class="alert alert-danger col-sm-12 ml-5 mt-2" role="alert"> Unable to Submit Your Request </div>';
+    $msg = '<div class="alert alert-danger col-sm-12 ml-5 mt-2" role="alert"> Impossible de soumettre votre demande </div>';
    }
  }
 }
@@ -47,106 +54,7 @@ if(isset($_REQUEST['submitrequest'])){
 <div class="layout-page">
   <!-- Navbar -->
 
-  <nav
-    class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-    id="layout-navbar"
-  >
-    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-      <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-        <i class="bx bx-menu bx-sm"></i>
-      </a>
-    </div>
-
-    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-      <!-- Search -->
-      <div class="navbar-nav align-items-center">
-        <div class="nav-item d-flex align-items-center">
-          <i class="bx bx-search fs-4 lh-0"></i>
-          <input
-            type="text"
-            class="form-control border-0 shadow-none"
-            placeholder="Search..."
-            aria-label="Search..."
-          />
-        </div>
-      </div>
-      <!-- /Search -->
-
-      <ul class="navbar-nav flex-row align-items-center ms-auto">
-        <!-- Place this tag where you want the button to render. -->
-        <li class="nav-item lh-1 me-3">
-          <a
-            class="github-button"
-            href="https://github.com/themeselection/sneat-html-admin-template-free"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-            >Star</a
-          >
-        </li>
-
-        <!-- User -->
-        <li class="nav-item navbar-dropdown dropdown-user dropdown">
-          <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-            <div class="avatar avatar-online">
-              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-            </div>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item" href="#">
-                <div class="d-flex">
-                  <div class="flex-shrink-0 me-3">
-                    <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                    </div>
-                  </div>
-                  <div class="flex-grow-1">
-                    <span class="fw-semibold d-block"><?php echo $rName?></span>
-                    <small class="text-muted">Admin</small>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <div class="dropdown-divider"></div>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                <i class="bx bx-user me-2"></i>
-                <span class="align-middle">My Profile</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                <i class="bx bx-cog me-2"></i>
-                <span class="align-middle">Settings</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">
-                <span class="d-flex align-items-center align-middle">
-                  <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                  <span class="flex-grow-1 align-middle">Billing</span>
-                  <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <div class="dropdown-divider"></div>
-            </li>
-            <li>
-              <a class="dropdown-item" href="auth-login-basic.html">
-              <i class='bx bx-power-off ' style='color:#ff0a00' ></i>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!--/ User -->
-      </ul>
-    </div>
-  </nav>
+  
 
   <!-- / Navbar -->
 
@@ -155,7 +63,7 @@ if(isset($_REQUEST['submitrequest'])){
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Vertical Layouts</h4>
+      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Demandes /</span> Demender une intervention</h4>
 
       <!-- Basic Layout -->
       <div class="row">
@@ -163,7 +71,7 @@ if(isset($_REQUEST['submitrequest'])){
         <div class="col-xl">
           <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">Basic with Icons</h5>
+              <h5 class="mb-0">Envoyer la demandedemander une interventions</h5>
               <small class="text-muted float-end">Merged input group</small>
             </div>
             <div class="card-body">
@@ -171,7 +79,7 @@ if(isset($_REQUEST['submitrequest'])){
                
 
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputRequestInfo">requesst info</label>
+                          <label class="col-sm-2 col-form-label" for="inputRequestInfo">infos du demande</label>
                           <div class="col-sm-10">
                             <input
                             id="inputRequestInfos"
@@ -192,15 +100,15 @@ if(isset($_REQUEST['submitrequest'])){
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputName">Name</label>
+                          <label class="col-sm-2 col-form-label" for="inputName">Nom</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" placeholder="Redouane" name="requestername"/>
+                            <input type="text" class="form-control" id="inputName" value="<?php echo $rName?>" name="requestername"/>
                           </div>
                 </div>
                 <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="inputEmail">Email</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="name@example.com" name="requesteremail"/>
+                            <input type="text" class="form-control" id="inputEmail" value="<?php echo $rEmail?>" name="requesteremail"/>
                           </div>
                 </div>
                 <div class="row mb-3">
@@ -237,13 +145,31 @@ if(isset($_REQUEST['submitrequest'])){
                 <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="inputCity">City</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputCity" placeholder="City" name="requestercity"/>
+                            <!-- <input type="text" class="form-control" id="inputCity" placeholder="City" name="requestercity"/> -->
+                            <select  class="form-select" id="inputCity" name="requestercity" >
+                              <?php
+                                $json = file_get_contents('../ville.json');
+                                $data = json_decode($json, true);
+                                  foreach($data['villes'] as $entry) {
+                                    echo "<option value=".$entry['ville']."select>".$entry['ville']."</option>";
+                                  }
+                                ?>
+                            </select>
                           </div>
                 </div>
                 <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="inputState">province</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputState" placeholder="privince" name="requesterstate"/>
+                            <!-- <input type="text" class="form-control" id="inputState" placeholder="privince" name="requesterstate"/> -->
+                            <select  class="form-select" id="inputState" name="requesterstate" >
+                              <?php
+                                $json = file_get_contents('../region.json');
+                                $data = json_decode($json, true);
+                                  foreach($data['provinces'] as $entry) {
+                                    echo "<option value=".$entry['region']."select>".$entry['region']."</option>";
+                                  }
+                                ?>
+                            </select>
                           </div>
                 </div>
                 <div class="row mb-3">
@@ -257,7 +183,7 @@ if(isset($_REQUEST['submitrequest'])){
               
                
                 
-                <button type="submit" class=" btn btn-primary me-2 my-2" name="submitrequest">Submit</button>
+                <button type="submit" class=" btn btn-primary me-2 my-2" name="submitrequest">Envoyer la demande</button>
                 <button type="reset" class="btn btn-outline-secondary me-2 my-2">reset</button>
 
                 <?php if(isset($msg)) {echo $msg; } ?>
