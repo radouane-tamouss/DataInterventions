@@ -24,28 +24,28 @@ session_start();
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Basic Tables</h4>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Interventions Infos</h4>
 
               <!-- Basic Bootstrap Table -->
               <div class="card">
-                <h5 class="card-header">Table Basic</h5>
+                <h5 class="card-header">Infos dur les Interventions</h5>
                 <div class="table-responsive text-nowrap">
                 <?php 
-   $sql = "SELECT * FROM assignwork_tb";
-   $result = $conn->query($sql);
-   if($result->num_rows > 0){
-    echo '
+                $sql = "SELECT * FROM assignwork_tb";
+                $result = $conn->query($sql);
+                if($result->num_rows > 0){
+                  echo '
                   <table class="table">
                     <thead>
                       <tr>
-                      <th scope="col">Req ID</th>
-                      <th scope="col">Request Info</th>
-                      <th scope="col">Name</th>
+                      <th scope="col">Demande ID</th>
+                      <th scope="col">Demande Info</th>
+                      <th scope="col">Nom</th>
                       <th scope="col">Address</th>
-                      <th scope="col">City</th>
-                      <th scope="col">Mobile</th>
-                      <th scope="col">Technician</th>
-                      <th scope="col">Assigned Date</th>
+                      <th scope="col">Ville</th>
+                      <th scope="col">Telephone</th>
+                      <th scope="col">Technicien</th>
+                      <th scope="col">Date D\'attribution</th>
                       <th scope="col">Action</th>
                       </tr>
                     </thead>
@@ -76,7 +76,7 @@ session_start();
                       // below code will refresh the page after deleting the record
                       echo '<meta http-equiv="refresh" content= "0;URL=?deleted" />';
                       } else {
-                        echo "Unable to Delete Data";
+                        echo "Impossible de supprimer les donnes";
                       }
                     }
                   ?>
