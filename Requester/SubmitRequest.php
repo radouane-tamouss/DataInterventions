@@ -71,8 +71,7 @@ if(isset($_REQUEST['submitrequest'])){
         <div class="col-xl">
           <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">Envoyer la demandedemander une interventions</h5>
-              <small class="text-muted float-end">Merged input group</small>
+              <h5 class="mb-0">Demander une interventions</h5>
             </div>
             <div class="card-body">
               <form  class="mx-5" action="" method="POST">
@@ -86,7 +85,7 @@ if(isset($_REQUEST['submitrequest'])){
                             class="form-control form-control-lg"
                             type="text"
                             name="requestinfo"
-                            placeholder="Request Info"
+                            placeholder="infos du demande"
                             />
                           </div>
                 </div>
@@ -95,7 +94,7 @@ if(isset($_REQUEST['submitrequest'])){
                           <label class="col-sm-2 col-form-label" for="inputRequestDescription">Description</label>
                           <div class="col-sm-10">
                             <!-- <input type="text" class="form-control" id="basic-default-name" placeholder="Write Description" name="requestdesc"/> -->
-                            <textarea class="form-control" id="inputRequestDescription" rows="3" placeholder="Write Description" name="requestdesc"></textarea>
+                            <textarea class="form-control" id="inputRequestDescription" rows="3" placeholder="Description de probleme" name="requestdesc"></textarea>
 
                           </div>
                 </div>
@@ -131,19 +130,19 @@ if(isset($_REQUEST['submitrequest'])){
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputAddress">Address Line 1</label>
+                          <label class="col-sm-2 col-form-label" for="inputAddress">Addresse  1</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Address Line 1" name="requesteradd1"/>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Addresse  1" name="requesteradd1"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputAddress2">Adresse Line 2</label>
+                          <label class="col-sm-2 col-form-label" for="inputAddress2">Adresse  2</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Address Line 2" name="requesteradd2"/>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Addresse 2" name="requesteradd2"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputCity">City</label>
+                          <label class="col-sm-2 col-form-label" for="inputCity">ville</label>
                           <div class="col-sm-10">
                             <!-- <input type="text" class="form-control" id="inputCity" placeholder="City" name="requestercity"/> -->
                             <select  class="form-select" id="inputCity" name="requestercity" >
@@ -184,7 +183,7 @@ if(isset($_REQUEST['submitrequest'])){
                
                 
                 <button type="submit" class=" btn btn-primary me-2 my-2" name="submitrequest">Envoyer la demande</button>
-                <button type="reset" class="btn btn-outline-secondary me-2 my-2">reset</button>
+                <button type="reset" class="btn btn-outline-secondary me-2 my-2">réinitialiser</button>
 
                 <?php if(isset($msg)) {echo $msg; } ?>
               </form>

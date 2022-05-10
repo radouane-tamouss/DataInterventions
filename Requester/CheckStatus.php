@@ -53,7 +53,7 @@ if($_SESSION['is_login']){
                       class="form-control"
                       id="basic-icon-default-fullname"
                       name="checkid"
-                      placeholder="Enter Request ID :"
+                      placeholder="Saisir votre demande ID :"
                       aria-describedby="basic-icon-default-fullname2"
                       onkeypress="isInputNumber(event)"
                       required

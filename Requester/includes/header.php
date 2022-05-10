@@ -95,7 +95,7 @@
           <li class="menu-item">
               <a href="../logout.php" class="menu-link">
               <i class='menu-icon tf-icons bx bx-log-out' ></i>
-                <div data-i18n="Analytics">logout</div>
+                <div data-i18n="Analytics">Se déconnecter</div>
               </a>
           </li>
         </ul>
