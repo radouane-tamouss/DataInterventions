@@ -204,6 +204,10 @@ Cet espace est réservé aux membres du Conseil d’Administration et aux gestio
                 <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
                   <div class="card">
                     <div class="row row-bordered g-0">
+                      <div class="col-md-12">
+                        <h5 class="card-header m-0 me-2 pb-3">Demandes </h5>
+                        <div id="totalRevenueChart" class="px-2"></div>
+                      </div>
                      
                     </div>
                   </div>
