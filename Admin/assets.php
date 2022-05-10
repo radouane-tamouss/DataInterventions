@@ -48,7 +48,7 @@ session_start();
 
               <!-- Basic Bootstrap Table -->
               <div class="card">
-                <h5 class="card-header">Produits /Parts Details</h5>
+                <h5 class="card-header">Produits / détails</h5>
                 <div class="table-responsive text-nowrap">
 
                 <?php
@@ -59,13 +59,13 @@ session_start();
               <table class="table">
                 <thead>
                   <tr>
-                  <th scope="col">Product ID</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">DOP</th>
-                  <th scope="col">Available</th>
+                  <th scope="col">Produit ID</th>
+                  <th scope="col">Nom</th>
+                  <th scope="col">date d\'achat</th>
+                  <th scope="col">quantity en stock</th>
                   <th scope="col">Total</th>
-                  <th scope="col">Original Cost Each</th>
-                  <th scope="col">Selling Price Each</th>
+                  <th scope="col">prix d\'achat</th>
+                  <th scope="col">prix de vente</th>
                  
                   <th scope="col">Action</th>
                   </tr>
@@ -101,7 +101,7 @@ session_start();
               // below code will refresh the page after deleting the record
               echo '<meta http-equiv="refresh" content= "0;URL=?deleted" />';
               } else {
-                echo "Unable to Delete Data";
+                echo "Impossible de supprimer les données";
               }
             }
           ?>
