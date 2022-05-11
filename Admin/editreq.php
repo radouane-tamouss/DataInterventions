@@ -14,7 +14,8 @@ session_start();
   // Checking for Empty Fields
   if(($_REQUEST['r_login_id'] == "") || ($_REQUEST['r_name'] == "") || ($_REQUEST['r_email'] == "")){
    // msg displayed if required field missing
-   $msg = '<div class="alert alert-warning col-sm-12 mt-2" role="alert"> Fill All Fileds </div>';
+   $msg = '<div class="alert alert-warning col-sm-12 mt-2" role="alert"> Remplir tous les champs
+   </div>';
   } else {
     // Assigning User Values to Variable
     $rid = $_REQUEST['r_login_id'];
@@ -24,7 +25,8 @@ session_start();
   $sql = "UPDATE requesterlogin_tb SET r_login_id = '$rid', r_name = '$rname', r_email = '$remail' WHERE r_login_id = '$rid'";
     if($conn->query($sql) == TRUE){
      // below msg display on form submit success
-     $msg = '<div class="alert alert-success col-sm-12 mt-2" role="alert"> Updated Successfully </div>';
+     $msg = '<div class="alert alert-success col-sm-12 mt-2" role="alert">
+     Mis à jour avec succés</div>';
     } else {
      // below msg display on form submit failed
      $msg = '<div class="alert alert-danger col-sm-12 mt-2" role="alert"> Unable to Update </div>';
@@ -37,13 +39,40 @@ session_start();
 
 <div class="layout-page">
 
+<nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="m-1 my-4">
+             <img src="../images/data.png" alt="">
+            </div>
+
+
+            <div class="navbar-nav-right d-flex align-items-center" sid="navbar-collape">
+             
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+               
+
+                <a href="../logout.php">
+                <i class='bx bx-exit' style='color:#f70000'  ></i>
+                      </a>
+              </ul>
+            </div>
+          </nav>
 
 <div class="content-wrapper">
 
  <!-- Content -->
 
  <div class="container-xxl flex-grow-1  container-p-y">
-      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Technician/</span> Update technician details</h4>
 
       <!-- Basic Layout -->
       <div class="row">
@@ -51,8 +80,7 @@ session_start();
       <div class="col-xl">
           <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">Update Requester Details</h5>
-              <small class="text-muted float-end">Merged input group</small>
+              <h5 class="mb-0">Modifier Demendeurs details</h5>
             </div>
             <div class="card-body">
                               <?php
@@ -66,7 +94,7 @@ session_start();
                
 
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="r_login_id">Requester ID</label>
+                          <label class="col-sm-2 col-form-label" for="r_login_id">Demendeur ID</label>
                           <div class="col-sm-10">
                             <input
                             id="r_login_id"
@@ -79,7 +107,7 @@ session_start();
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="r_name">Name</label>
+                          <label class="col-sm-2 col-form-label" for="r_name">Nome</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control today" id="r_name" value="<?php if(isset($row['r_name'])) {echo $row['r_name']; }?>" name="r_name"/>
                           </div>
@@ -99,8 +127,8 @@ session_start();
               
                
                 
-                <button type="submit" class=" btn btn-primary me-2 my-2" id="requpdate" name="requpdate">Update</button>
-                <a href="requester.php" class="btn btn-secondary">close</a>
+                <button type="submit" class=" btn btn-primary me-2 my-2" id="requpdate" name="requpdate">Modifier</button>
+                <a href="requester.php" class="btn btn-secondary">Fermer</a>
 
                 <?php if(isset($msg)) {echo $msg; } ?>
               </form>
