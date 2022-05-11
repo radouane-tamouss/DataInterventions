@@ -13,10 +13,22 @@ session_start();
 
 <!-- ==================================================================== -->
 <div class="layout-page">
+  
+<style>
+
+@media print {
+	.no-printme  {
+		display: none;
+	}
+	.printme  {
+		display: block;
+	}
+}
+</style>
           <!-- Navbar -->
 
           <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme no-printme"
             id="layout-navbar"
           >
             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
@@ -54,7 +66,7 @@ session_start();
 
               <!-- Bordered Table -->
               <div class="card">
-                <h5 class="card-header">Bordered Table</h5>
+                <h5 class="card-header text-center">Détails de l'Interventions</h5>
                 <div class="card-body">
                   <div class="table-responsive text-nowrap">
                     <?php
@@ -67,55 +79,55 @@ session_start();
                     <table class="table table-striped">
                       <tbody>
                                             <tr>
-                            <td>Request ID</td>
+                            <td>Demande ID</td>
                             <td>
                             <?php if(isset($row['request_id'])) {echo $row['request_id']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Request Info</td>
+                            <td>Demande Info</td>
                             <td>
                             <?php if(isset($row['request_info'])) {echo $row['request_info']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Request Description</td>
+                            <td>Description</td>
                             <td>
                             <?php if(isset($row['request_desc'])) {echo $row['request_desc']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Name</td>
+                            <td>Nom</td>
                             <td>
                             <?php if(isset($row['requester_name'])) {echo $row['requester_name']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Address Line 1</td>
+                            <td>Addresse 1</td>
                             <td>
                             <?php if(isset($row['requester_add1'])) {echo $row['requester_add1']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Address Line 2</td>
+                            <td>Addresse 2</td>
                             <td>
                             <?php if(isset($row['requester_add2'])) {echo $row['requester_add2']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>City</td>
+                            <td>Ville</td>
                             <td>
                             <?php if(isset($row['requester_city'])) {echo $row['requester_city']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>State</td>
+                            <td>Province</td>
                             <td>
                             <?php if(isset($row['requester_state'])) {echo $row['requester_state']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Pin Code</td>
+                            <td>Code Postale</td>
                             <td>
                             <?php if(isset($row['requester_zip'])) {echo $row['requester_zip']; }?>
                             </td>
@@ -127,31 +139,24 @@ session_start();
                             </td>
                         </tr>
                         <tr>
-                            <td>Mobile</td>
+                            <td>Telephone</td>
                             <td>
                             <?php if(isset($row['requester_mobile'])) {echo $row['requester_mobile']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Assigned Date</td>
+                            <td>Date d'attribution</td>
                             <td>
                             <?php if(isset($row['assign_date'])) {echo $row['assign_date']; }?>
                             </td>
                         </tr>
                         <tr>
-                            <td>Technician Name</td>
+                            <td>Nom de technicien</td>
                             <td>
                             <?php if(isset($row['assign_tech'])) {echo $row['assign_tech']; }?>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Customer Sign</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Technician Sign</td>
-                            <td></td>
-                        </tr>
+                        
                       </tbody>
                     </table>
                     
