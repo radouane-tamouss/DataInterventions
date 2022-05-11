@@ -45,7 +45,7 @@ session_start();
     <div class="content-wrapper">
 
     <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-2 mb-2"><span class="text-muted fw-light">UI Elements /</span> Cards Basic</h4>
+              <h4 class="fw-bold py-2 mb-2"><span class="text-muted fw-light">Demandes /</span> Tickets</h4>
               <div class="row mb-2">
               <?php 
               $sql = "SELECT request_id, request_info, request_desc, request_date FROM submitrequest_tb";
@@ -54,12 +54,12 @@ session_start();
                 while($row = $result->fetch_assoc()){
                echo '<div class="col-md-6 col-lg-4 mb-2">';
                  echo' <div class="card">';
-                   echo' <div class="card-header">'; echo'Request ID :'. $row['request_id']; echo'</div>';
+                   echo' <div class="card-header">'; echo'Demande ID :'. $row['request_id']; echo'</div>';
                    echo' <div class="card-body">';
-                   echo'   <h5 class="card-title"> Request Info: '. $row['request_info'] . '</h5>';
+                   echo'   <h5 class="card-title"> Demande Info: '. $row['request_info'] . '</h5>';
                      echo'<p class="card-text">'. $row['request_desc']. '</p>';
 
-                        echo '<form action="" method="POST"> <input type="hidden"  name="id"  value='. $row["request_id"] .'><input type="submit" class="btn btn-primary mr-3" name="view"  value="View" ><input type="submit" class="btn btn-secondary" name="close" value="Close"></form>';
+                        echo '<form action="" method="POST"> <input type="hidden"  name="id"  value='. $row["request_id"] .'><input type="submit" class="btn btn-primary mr-3" name="view"  value="Voir" ><input type="submit" class="btn btn-secondary" name="close" value="Fermer"></form>';
 
                      
                    echo'</div>';
