@@ -37,17 +37,13 @@ session_start();
                
 
                 <a href="../logout.php">
-                <i class='bx bx-power-off bx-fade-right' style='color:#ff0a00' ></i>
+                <i  class='bx bx-exit' style='color:#f70000'  ></i>
 
                       </a>
               </ul>
             </div>
           </nav>
-<div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4  m-2" href="javascript:void(0)">
-                <i class="bx bx-menu bx-sm"></i>
-              </a>
-            </div>
+
 
             <div class="content-wrapper">
 
