@@ -13,7 +13,8 @@ session_start();
   // Checking for Empty Fields
   if(($_REQUEST['cname'] == "") || ($_REQUEST['cadd'] == "") || ($_REQUEST['pname'] == "") || ($_REQUEST['pquantity'] == "") || ($_REQUEST['psellingcost'] == "") || ($_REQUEST['totalcost'] == "") || ($_REQUEST['selldate'] == "")){
    // msg displayed if required field missing
-   $msg = '<div class="alert alert-warning col-sm-6 ml-5 mt-2" role="alert"> Fill All Fileds </div>';
+   $msg = '<div class="alert alert-warning col-sm-6 ml-12" role="alert"> Remplir tous les champs
+   </div>';
   } else {
     // Assigning User Values to Variable for update
     $pid = $_REQUEST['pid'];
@@ -46,12 +47,39 @@ session_start();
  <div class="layout-page">
 
 
+ <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar"
+          >
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="m-1 my-4">
+             <img src="../images/data.png" alt="">
+            </div>
+
+
+            <div class="navbar-nav-right d-flex align-items-center" sid="navbar-collape">
+             
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+               
+
+                <a href="../logout.php">
+                <i class='bx bx-exit' style='color:#f70000'  ></i>
+                      </a>
+              </ul>
+            </div>
+          </nav>
 <div class="content-wrapper">
 
  <!-- Content -->
 
  <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Bills /</span> Customer Bill</h4>
 
       <!-- Basic Layout -->
       <div class="row"> 
@@ -59,8 +87,7 @@ session_start();
       <div class="col-xl">
           <div class="card mb-4">
             <div class="card-header d-flex justify-content-between align-items-center">
-              <h5 class="mb-0">Add New Product</h5>
-              <small class="text-muted float-end">Merged input group</small>
+              <h5 class="mb-0">Ajouter une facture</h5>
             </div>
             <div class="card-body">
             <?php
@@ -74,7 +101,7 @@ session_start();
                
 
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputRequestInfo">Product ID</label>
+                          <label class="col-sm-2 col-form-label" for="inputRequestInfo">Produit ID</label>
                           <div class="col-sm-10">
                             <input
                             id="pid"
@@ -89,26 +116,26 @@ session_start();
 
                
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputName">Customer Name</label>
+                          <label class="col-sm-2 col-form-label" for="inputName">Nom de client</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control today" id="cname" name="cname"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputEmail">Customer Address</label>
+                          <label class="col-sm-2 col-form-label" for="inputEmail">Addresse de client</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="cadd" name="cadd"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="inputMobile">Product Name</label>
+                          <label class="col-sm-2 col-form-label" for="inputMobile">Nom de produit</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="pname"  name="pname" value="<?php if(isset($row['pname'])) {echo $row['pname']; }?>" />
                           </div>
                 </div>
                 
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="pava">Available</label>
+                          <label class="col-sm-2 col-form-label" for="pava">QTE en stock</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="pava"  name="pava" value="<?php if(isset($row['pava'])) {echo $row['pava']; }?>"
         readonly onkeypress="isInputNumber(event)"/>
@@ -121,13 +148,14 @@ session_start();
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="psellingcost">Price Each</label>
+                          <label class="col-sm-2 col-form-label" for="psellingcost">prix individuel
+ </label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="psellingcost"  onkeypress="isInputNumber(event)" name="psellingcost" value="<?php if(isset($row['psellingcost'])) {echo $row['psellingcost']; }?>"/>
                           </div>
                 </div>
                 <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label" for="totalcost">Total Price</label>
+                          <label class="col-sm-2 col-form-label" for="totalcost">prix total</label>
                           <div class="col-sm-10">
                             <input type="text" class="form-control" id="totalcost"  onkeypress="isInputNumber(event)" name="totalcost" />
                           </div>
@@ -144,8 +172,8 @@ session_start();
               
                
                 
-                <button type="submit" class=" btn btn-primary me-2 my-2" id="psubmit" name="psubmit">Submit</button>
-                <a href="assets.php" class="btn btn-secondary">close</a>
+                <button type="submit" class=" btn btn-primary me-2 my-2" id="psubmit" name="psubmit">soumettre</button>
+                <a href="assets.php" class="btn btn-secondary">Fermer</a>
 
                 <?php if(isset($msg)) {echo $msg; } ?>
               </form>
