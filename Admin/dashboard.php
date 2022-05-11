@@ -234,14 +234,14 @@ Cet espace est réservé aux membres du Conseil d’Administration et aux gestio
                                 <i class="bx bx-dots-vertical-rounded"></i>
                               </button>
                               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
-                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                                <a class="dropdown-item" href="request.php">Voir plus</a>
                                
                               </div>
                             </div>
                           </div>
                           <span class="d-block mb-1">Clients</span>
                           <h3 class="card-title text-nowrap mb-2"><?php echo $customers ;?></h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> <?php echo $customerstoday;?>Aujourdhui</small>
+                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> <?php echo $customerstoday;?> Aujourdhui</small>
                         </div>
                       </div>
                     </div>
@@ -264,7 +264,7 @@ Cet espace est réservé aux membres du Conseil d’Administration et aux gestio
                                 <i class="bx bx-dots-vertical-rounded"></i>
                               </button>
                               <div class="dropdown-menu" aria-labelledby="cardOpt1">
-                                <a class="dropdown-item" href="javascript:void(0);">Voir plus</a>
+                                <a class="dropdown-item" href="technician.php">Voir plus</a>
                                 
                               </div>
                             </div>

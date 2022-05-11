@@ -92,7 +92,7 @@ if(isset($_REQUEST['psubmit'])){
                             class="form-control form-control-lg"
                             type="text"
                             name="pname"
-                            placeholder="product name"
+                            placeholder="Nom de Produit"
                             />
                           </div>
                 </div>
@@ -126,7 +126,7 @@ if(isset($_REQUEST['psubmit'])){
                 <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="inputAddress2">Coût de vente chacun</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="psellingcost" placeholder="Address Line 2"  onkeypress="isInputNumber(event)" name="psellingcost"/>
+                            <input type="text" class="form-control" id="psellingcost"   onkeypress="isInputNumber(event)" name="psellingcost"/>
                           </div>
                 </div>
            
