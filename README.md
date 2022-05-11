@@ -19,7 +19,7 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
 
 1. Download the latest version with git (`git clone https://github.com/radouane-tamouss/DataInterventions.git`)
 
-2. Import/load datainterventions.sql into your mysql database. This should set up the basic structure of the database system.
+2. Import/load inter.sql into your mysql database. This should set up the basic structure of the database system.
 
 3. Modify the config.php file and change the variables to match your host, database, username and passwords.
 
