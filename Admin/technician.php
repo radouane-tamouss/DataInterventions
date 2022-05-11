@@ -53,11 +53,10 @@ session_start();
 
              <!-- Content -->
              <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Technicians /</span> List of Technicians</h4>
 
               <!-- Basic Bootstrap Table -->
               <div class="card">
-                <h5 class="card-header">Product/Parts Details</h5>
+                <h5 class="card-header">Techniciens infos</h5>
                 <div class="table-responsive text-nowrap">
 
                 <?php
@@ -68,10 +67,10 @@ session_start();
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Emp ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">City</th>
-                    <th scope="col">Mobile</th>
+                    <th scope="col">Tech ID</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Telephone</th>
                     <th scope="col">Email</th>
                     <th scope="col">Action</th>
                   </tr>
@@ -86,8 +85,8 @@ session_start();
                   echo '<td>'.$row["empEmail"].'</td>';
                    
                    echo' <td>
-                    <form action="editemp.php" method="POST" class="d-inline"> <input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-primary  py-0 px-1" name="view" value="View"><i class="bi bi-pencil-square"></i></button></form>  
-                    <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-danger  py-0 px-1" name="delete" value="Delete"><i class="bi bi-trash-fill"></i></button></form>
+                    <form action="editemp.php" method="POST" class="d-inline"> <input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-primary  py-0 px-1" name="view" value="Voir"><i class="bi bi-pencil-square"></i></button></form>  
+                    <form action="" method="POST" class="d-inline"><input type="hidden" name="id" value='. $row["empid"] .'><button type="submit" class="btn btn-danger  py-0 px-1" name="delete" value="Supprimer"><i class="bi bi-trash-fill"></i></button></form>
                   </td>
                 </tr>';
                
@@ -104,7 +103,7 @@ session_start();
               // below code will refresh the page after deleting the record
               echo '<meta http-equiv="refresh" content= "0;URL=?deleted" />';
               } else {
-                echo "Unable to Delete Data";
+                echo "impossible de supprimer les donnes";
               }
             }
           ?>
