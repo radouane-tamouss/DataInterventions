@@ -38,7 +38,9 @@ the mobile version will disponible soon 🧐
 
 
 ![Screenshot 2022-05-12 100651](https://user-images.githubusercontent.com/78624319/168094675-92322aa8-338f-42df-93ed-2d28d3dff0cc.png)
+
 ![Screenshot 2022-05-12 100715](https://user-images.githubusercontent.com/78624319/168094577-6c308fd1-f554-42ba-a91c-7cfd8633e68c.png)
+
 ![Screenshot 2022-05-12 100825](https://user-images.githubusercontent.com/78624319/168094662-df5b9642-92f4-4d28-aae5-266d5ddec8c7.png)
 
 ![Screenshot 2022-05-12 100735](https://user-images.githubusercontent.com/78624319/168094634-2da97aa2-e653-4a52-914c-4ce48e9dbba7.png)
