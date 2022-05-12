@@ -26,10 +26,10 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
 5. Then loging by typing **username** and **password** (you can create an user account):
 
 
-   Administrator                    |  Requester User            |
-   ---------------------------------| ---------------------------|
+   Administrator                    |  Requester User                    |
+   ---------------------------------| -----------------------------------|
    **Link**     : path/admin/login  |
-   **Email**    : admin@gmail.com   |    you can register with   |
-   **Password** : 123456            |        a new acc           | 
+   **Email**    : admin@gmail.com   |    you can register with a new acc |
+   **Password** : 123456            |                                    | 
 
 Live Demo : https://dataxpress.info
