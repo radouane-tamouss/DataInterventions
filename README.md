@@ -34,4 +34,6 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
 
 Live Demo : https://dataxpress.info
 
+the mobile version will disponible soon 🧐
+
 contact me at atamousse.red@gmail.com
