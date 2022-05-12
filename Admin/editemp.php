@@ -1,9 +1,9 @@
 <?php    
 define('TITLE', 'Update Technician');
 define('PAGE', 'technician');
+session_start();
 include('includes/header.php'); 
 include('../dbConnection.php');
-session_start();
  if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
  } else {
