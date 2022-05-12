@@ -23,7 +23,7 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
 
 3. Modify the config.php file and change the variables to match your host, database, username and passwords.
 
-5. Then loging by typing **username** and **password** (you can create an user account):
+5. Then loging by typing **username** and **password**:
 
 
    Administrator                    |  Requester User                    |
@@ -33,3 +33,5 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
    **Password** : 123456            |                                    | 
 
 Live Demo : https://dataxpress.info
+
+contact me at atamousse.red@gmail.com
