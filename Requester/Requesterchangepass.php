@@ -1,9 +1,9 @@
 <?php
 define('TITLE', 'Change Password');
 define('PAGE', 'Requesterchangepass');
+session_start();
 include('includes/header.php');
 include('../dbConnection.php');
-session_start();
 if($_SESSION['is_login']){
  $rEmail = $_SESSION['rEmail'];
 } else {
