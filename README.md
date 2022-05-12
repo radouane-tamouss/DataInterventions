@@ -28,8 +28,8 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
 
    Administrator                    |  Requester User            |
    ---------------------------------| ---------------------------|
-   **Link**     : path/admin        |
-   **Email**    : admin@gmail.com   | **Email** : user@user.com  |
-   **Password** : 123456            | **Password** : user        | 
+   **Link**     : path/admin/login  |
+   **Email**    : admin@gmail.com   |    you can register with   |
+   **Password** : 123456            |        a new acc           | 
 
 Live Demo : https://dataxpress.info
