@@ -36,4 +36,6 @@ Live Demo : https://dataxpress.info
 
 the mobile version will disponible soon 🧐
 
+<img src="images/data.png" alt="">
+
 contact me at atamousse.red@gmail.com
