@@ -32,4 +32,4 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
    **Email**    : admin@gmail.com   | **Email** : user@user.com  |
    **Password** : 123456            | **Password** : user        | 
 
-Live Demo : (`https://dataxpress.info`)
+Live Demo : https://dataxpress.info
