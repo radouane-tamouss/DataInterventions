@@ -1,8 +1,8 @@
 <?php
 define('TITLE', 'Success');
+session_start();
 include('includes/header.php'); 
 include('../dbConnection.php');
-session_start();
 if($_SESSION['is_login']){
  $rEmail = $_SESSION['rEmail'];
 } else {
