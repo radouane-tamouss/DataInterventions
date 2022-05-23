@@ -12,7 +12,7 @@ if($_SESSION['is_login']){
 
 $sql = "SELECT * FROM requesterlogin_tb WHERE r_email='$rEmail'";
 $result = $conn->query($sql);
-if($result->num_rows == 1){
+if($result->num_rows == 2){
 $row = $result->fetch_assoc();
 $rName = $row["r_name"]; }
 
