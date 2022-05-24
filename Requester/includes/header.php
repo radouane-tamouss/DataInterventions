@@ -58,7 +58,7 @@
   <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         
             <div class="m-2">
-             <img src="../images/data.png" alt="">
+             <img src="../images/data2.png" alt="">
             </div>
 
         <div class="menu-inner-shadow"></div>
