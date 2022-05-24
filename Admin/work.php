@@ -1,9 +1,9 @@
 <?php
 define('TITLE', 'Work Order');
 define('PAGE', 'work');
-session_start();
 include('includes/header.php'); 
 include('../dbConnection.php');
+session_start();
  if(isset($_SESSION['is_adminlogin'])){
   $aEmail = $_SESSION['aEmail'];
  } else {
@@ -109,6 +109,7 @@ include('../dbConnection.php');
                   ?>
                 </div>
               </div>
+              <a class="btn btn-dark box m-2 right" href="addintervention.php"><i class="bi bi-plus-square"></i></a>
             </div>
           
             <!-- / Content -->
