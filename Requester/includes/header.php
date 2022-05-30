@@ -57,7 +57,7 @@
         <!-- Menu -->
   <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         
-            <div class="m-3">
+            <div class="m-2">
             
             </div>
 
