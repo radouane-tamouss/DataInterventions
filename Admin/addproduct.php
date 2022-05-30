@@ -59,7 +59,7 @@ if(isset($_REQUEST['psubmit'])){
                
 
                 <a href="../logout.php">
-                <i class='bx bx-exit' style='color:#f70000'  ></i>
+               <i class='bx bx-exit bx-sm' style='color:#10a5c6'  ></i>
                         
                       </a>
               </ul>
