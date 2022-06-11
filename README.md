@@ -1,4 +1,4 @@
-<!-- # DataInterventions 
+# DataInterventions 
 a simple web app for managing technical interventions
 
 
@@ -32,8 +32,4 @@ The application created  using [php](http:php.net), [mysql](https://www.mysql.co
    **Email**    : admin@gmail.com   |    you can register with a new acc |
    **Password** : 123456            |                                    | 
 
-Live Demo : https://dataxpress.info
 
-the mobile version will be disponible soon 🧐
-
-contact me at atamousse.red@gmail.com -->
